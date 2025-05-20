@@ -1,7 +1,7 @@
 import { AppShell, Paper, Drawer, Stack, Anchor, Group, Container, Burger, Image } from "@mantine/core";
 import logo from "../assets/icon_home.svg";
 import { useState } from "react";
-import Marcadores_widget from "./marcadores_widget.tsx";
+import Marcadores_widget from "../components/MarcadoresWidget.tsx";
 
 export default function MarcadoresPage() {
     const [drawerOpened, setDrawerOpened] = useState(false); // Controla o estado do Drawer
