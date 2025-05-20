@@ -8,10 +8,10 @@ import {
   Button,
   Modal,
   Stack,
-  Accordion,
+  Accordion, Input,
 } from '@mantine/core';
 import { useState } from 'react';
-import wellcome from '../assets/quem_somos.jpg';
+import wellcome from '../assets/card_image.jpeg';
 
 // Define types for our data structure
 type Farmaco = {
@@ -745,13 +745,12 @@ const useMarcadoresData = () => {
         }
       ]
     }
-
   ];
 
   return { marcadores };
 };
 
-export default function MarcadoresPage() {
+export default function Marcadores_widget() {
   const [modalOpened, setModalOpened] = useState(false);
   const [selectedMarcador, setSelectedMarcador] = useState<Marcador | null>(null);
   const { marcadores } = useMarcadoresData();
@@ -761,47 +760,94 @@ export default function MarcadoresPage() {
     setModalOpened(true);
   };
 
+  const [searchTerm, setSearchTerm] = useState('');
+
+  function normalizarTexto(texto: string): string {
+    return texto
+        .normalize('NFD') // separa acentos das letras
+        .replace(/[\u0300-\u036f]/g, '') // remove os acentos
+        .toLowerCase()
+        .trim();
+  }
+
+
+  // Filtra os marcadores com base no nome ou descrição
+  const marcadoresFiltrados = marcadores.filter((marcador) => {
+    const termo = normalizarTexto(searchTerm);
+    const nome = normalizarTexto(marcador.nome);
+    const descricao = normalizarTexto(marcador.descricao);
+
+    return nome.includes(termo) || descricao.includes(termo);
+  });
+
+
+
   return (
     <>
       <section id="marcadores" style={{ 
         padding: '40px',
-        background: '#f8f9fa' 
+        background: '#f8f9fa'
       }}>
         <Container size="lg" px={{ base: 'xs', md: 0 }}>
           <Title order={2} ta="center" mb={{ base: 'lg', md: 'xl' }} fz={{ base: 24, md: 32 }}>
             Marcadores
           </Title>
 
-          <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={{ base: 'md', md: 'lg' }}>
-            {marcadores.map((marcador, index) => (
-              <Card key={index} shadow="sm" padding="lg" radius="md" withBorder>
-                <Card.Section>
-                  <Image
-                    src={wellcome}
-                    height={160}
-                    alt={marcador.nome}
-                  />
-                </Card.Section>
+          <Input
+              placeholder="Pesquisar por marcadores"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.currentTarget.value)}
+              style={{
+                borderRadius: '20px',
+                border: 'none',
+                borderColor: '#000',
+              }}
+          />
 
-                <Title order={3} mt="md" mb="xs" fz="lg" fw={500}>
-                  {marcador.nome}
-                </Title>
-
-                <Text size="sm" color="dimmed" lineClamp={3} mb="md">
-                  {marcador.descricao}
-                </Text>
-
-                <Button 
-                  variant="light" 
-                  color="blue" 
-                  fullWidth 
-                  mt="md" 
-                  radius="md"
-                  onClick={() => openModal(marcador)}
+          <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={{ base: 'md', md: 'lg' }} mt="xl">
+            {marcadoresFiltrados.map((marcador, index) => (
+                <Card
+                    key={index}
+                    shadow="sm"
+                    padding="lg"
+                    radius="md"
+                    withBorder
+                    style={{ display: 'flex', flexDirection: 'column' }}
                 >
-                  Ver mais detalhes
-                </Button>
-              </Card>
+                  <Card.Section>
+                    <Image
+                        src={wellcome}
+                        height={160}
+                        fit="fill"
+                        alt={marcador.nome}
+                    />
+                  </Card.Section>
+
+                  <Title order={3} mt="md" mb="xs" fz="lg" fw={500}>
+                    {marcador.nome}
+                  </Title>
+
+                  <Text
+                      size="sm"
+                      color="dimmed"
+                      lineClamp={3}
+                      mb="md"
+                      style={{ flexGrow: 1 }}
+                  >
+                    {marcador.descricao}
+                  </Text>
+
+                  <Button
+                      variant="light"
+                      color="blue"
+                      fullWidth
+                      mt="md"
+                      radius="md"
+                      onClick={() => openModal(marcador)}
+                  >
+                    Ver mais detalhes
+                  </Button>
+                </Card>
             ))}
           </SimpleGrid>
         </Container>
@@ -811,18 +857,12 @@ export default function MarcadoresPage() {
       <Modal
         opened={modalOpened}
         onClose={() => setModalOpened(false)}
-        title={selectedMarcador?.nome || "Detalhes do Marcador"}
+        title={"Detalhes do Marcador"}
         size="lg"
         centered
       >
         {selectedMarcador && (
           <Stack>
-            <Image
-              src={wellcome}
-              height={200}
-              alt={selectedMarcador.nome}
-              radius="md"
-            />
 
             <Title order={3} mt="md">
               {selectedMarcador.nome}

@@ -26,20 +26,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import "leaflet/dist/leaflet.css";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
-import MarcadoresPage from './pages/MarcadoresPage';
-
-
 
 export default function HomePage() {
   const [drawerOpened, setDrawerOpened] = useState(false);
 
   useEffect(() => {
-    document.title = 'UFC - Portfólio';
+    document.title = 'LAAC - Portfólio';
   }, []);
-
-
-
-
   return (
       <AppShell header={{ height: 90 }} padding="md">
         {/* Mobile Navigation Drawer */}
@@ -91,8 +84,8 @@ export default function HomePage() {
               {/* Desktop Navigation */}
               <Group visibleFrom="md">
                 <Anchor href="#" c="white" underline="never">Início</Anchor>
-                <Anchor href="#about" c="white" underline="never">Sobre</Anchor>
-                <Anchor href="#areas" c="white" underline="never">Áreas</Anchor>
+                <Anchor href="/sobre" c="white" underline="never">Sobre</Anchor>
+                <Anchor href="/marcadores" c="white" underline="never">Marcadores</Anchor>
                 <Anchor href="#contact" c="white" underline="never">Contato</Anchor>
               </Group>
 
@@ -108,10 +101,8 @@ export default function HomePage() {
         </AppShell.Header>
 
         <AppShell.Main>
-          <section id="home" style={{
-            paddingTop: rem(0),
-          }}>
-            <Container size="lg" px={{ base: 'xs', md: 0 }}>
+          <section id="home" style={{}}>
+            <Container size="xl" px={{ base: 'xs', md: 0 }}>
               <Container size="lg" px={{ base: 0, md: 0 }}>
                 <Swiper
                     modules={[Pagination, Autoplay]}
@@ -185,28 +176,25 @@ export default function HomePage() {
             </Container>
           </section>
 
-          <section id="areas">
-            <MarcadoresPage />
-          </section>
-
           <section id="contact" style={{ 
             padding: '40px',
             background: 'white' 
           }}>
             <Container size="lg" px={{ base: 'xs', md: 0 }}>
-              <Title order={2} ta="center" mb={{ base: 'lg', md: 'xl' }} fz={{ base: 24, md: 32 }}>
+              <Title order={2} ta="start" mb={{ base: 'lg', md: 'xl' }} fz={{ base: 24, md: 32 }}>
                 Fale Conosco!
               </Title>
               <Flex 
-                justify="center" 
+                justify="start"
                 mt={{ base: 'md', md: 'xl' }}
                 direction="column"
-                align="center"
+                align="start"
               >
                 <Stack 
-                  maw={600}
+                  maw={'100%'}
                   mx="auto" 
                   w="100%"
+                  align={'start'}
                   px={{ base: 'xs', sm: 0 }}
                 >
                   <Text fz={{ base: 15, md: 16 }} ta={{ base: 'center', sm: 'left' }} w="100%">
@@ -239,7 +227,7 @@ export default function HomePage() {
                 })}
               >
                 <MapContainer
-                    center={[-3.745, -38.574]} // Coordenadas da UFC
+                    center={[-3.7465, -38.5483]} // Coordenadas da UFC
                     zoom={17}
                     style={{ width: '100%', height: '100%' }}
                     zoomControl={false} // Move zoom controls for better mobile experience
@@ -250,9 +238,9 @@ export default function HomePage() {
                   />
 
                   {/* Marcador da UFC */}
-                  <Marker position={[-3.745, -38.574]}>
+                  <Marker position={[-3.7465, -38.5483]}>
                     <Popup>
-                      Universidade Federal do Ceará <br /> Fortaleza-CE
+                      LIGA ACADEMICA DE ANALISES CLINICAS - UFC<br /> Fortaleza-CE
                     </Popup>
                   </Marker>
                 </MapContainer>
