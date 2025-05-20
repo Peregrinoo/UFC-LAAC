@@ -79,7 +79,7 @@ export default function HomePage() {
         <AppShell.Header style={{ background: '#04293b' }}>
           <Container size="lg" h="100%" px={{ base: 'xs', md: 0 }}>
             <Group justify="space-between" h="100%" wrap="nowrap">
-              <Image src={logo} alt="ExaFarm Logo" h={48} w={48} style={{ minWidth: 40 }} />
+              <Image src={logo} alt="ExaFarm Logo" h={90} w={90} style={{ minWidth: 40 }} />
 
               {/* Desktop Navigation */}
               <Group visibleFrom="md">
@@ -181,7 +181,7 @@ export default function HomePage() {
             background: 'white' 
           }}>
             <Container size="lg" px={{ base: 'xs', md: 0 }}>
-              <Title order={2} ta="start" mb={{ base: 'lg', md: 'xl' }} fz={{ base: 24, md: 32 }}>
+              <Title order={2} ta={{base: "center", md: "start"}} mb={{ base: 'lg', md: 'xl' }} fz={{ base: 24, md: 32 }}>
                 Fale Conosco!
               </Title>
               <Flex 

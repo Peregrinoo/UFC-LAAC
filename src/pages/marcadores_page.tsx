@@ -62,7 +62,7 @@ export default function MarcadoresPage() {
             <AppShell.Header style={{ background: '#04293b' }}>
                 <Container size="lg" h="100%" px={{ base: 'xs', md: 0 }}>
                     <Group justify="space-between" h="100%" wrap="nowrap">
-                        <Image src={logo} alt="ExaFarm Logo" h={48} w={48} style={{ minWidth: 40 }} />
+                        <Image src={logo} alt="ExaFarm Logo" h={90} w={90} style={{ minWidth: 40 }} />
 
                         {/* Desktop Navigation */}
                         <Group visibleFrom="md">

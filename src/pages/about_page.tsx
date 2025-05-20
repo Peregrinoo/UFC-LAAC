@@ -64,7 +64,7 @@ export default function AboutPage() {
             <AppShell.Header style={{ background: "#04293b" }}>
                 <Container size="lg" h="100%" px={{ base: "xs", md: 0 }}>
                     <Group justify="space-between" wrap="nowrap" h="100%">
-                        <Image src={logo} alt="ExaFarm Logo" h={48} w={48} />
+                        <Image src={logo} alt="ExaFarm Logo" h={90} w={90} />
 
                         {/* Desktop Navigation */}
                         <Group visibleFrom="md">
