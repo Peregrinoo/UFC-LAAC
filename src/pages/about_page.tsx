@@ -109,7 +109,7 @@ export default function AboutPage() {
                             mb={{ base: "lg", md: "xl" }}
                             fz={{ base: 24, md: 32 }}
                         >
-                            Sobre nós
+                            Quem somos ?
                         </Title>
 
                         <Flex
