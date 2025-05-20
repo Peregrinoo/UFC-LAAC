@@ -17,7 +17,6 @@ import { Navbar } from './components/Navbar';
 import slide1 from './assets/slide3.jpg'
 import slide2 from './assets/slide2.jpg'
 import slide3 from './assets/slide1.jpg'
-import wellcome from './assets/quem_somos.jpg';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
@@ -82,17 +81,10 @@ export default function HomePage() {
                     mt="xl" 
                     direction={{ base: 'column', md: 'row' }} 
                     gap={{ base: 'xl', md: 'md' }}
-                    align="center"
+                    align="start"
                   >
-                    <Image 
-                      src={wellcome} 
-                      alt="ExaFarm Logo" 
-                      w={{ base: '100%', md: '45%' }} 
-                      radius="md"
-                      mx={{ base: 'auto', md: 0 }}
-                    />
 
-                    <Box w={{ base: '100%', md: '55%' }} px={{ base: 'xs', md: 'md' }}>
+                    <Box w={{ base: '100%', md: '100%' }} px={{ base: 'xs', md: 'md' }}>
                       <Title order={2} ta={{ base: 'center', md: 'left' }} mb="xl" fz={{ base: 24, md: 32 }}>
                         Bem-vindo ao ExaFarm!
                       </Title>
