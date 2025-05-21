@@ -1,27 +1,22 @@
 import {
   AppShell,
   Container,
-  Image,
   Text,
   Title,
   Anchor,
   Stack,
-  rem,
   Flex,
   Box,
 } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper/modules';
+
 import { Navbar } from './components/Navbar';
-import slide1 from './assets/slide3.jpg'
-import slide2 from './assets/slide2.jpg'
-import slide3 from './assets/slide1.jpg'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import "leaflet/dist/leaflet.css";
 import {MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
+import SliderCarousel from "./components/SliderWidget.tsx";
 
 export default function HomePage() {
   const [drawerOpened, setDrawerOpened] = useState(false);
@@ -37,43 +32,8 @@ export default function HomePage() {
           <section id="home" style={{}}>
             <Container size="xl" px={{ base: 'xs', md: 0 }}>
               <Container size="lg" px={{ base: 0, md: 0 }}>
-                <Swiper
-                    modules={[Pagination, Autoplay]}
-                    pagination={{ clickable: true }}
-                    autoplay={{
-                      delay: 3000,
-                      disableOnInteraction: false,
-                    }}
-                    loop
-                    style={{
-                      height: '100%',
-                      width: '100%',
-                      maxWidth: '100%',
-                      margin: '0 auto',
-                      borderRadius: 8,
-                      overflow: 'hidden',
-                      background: '#eee',
-                    }}
-                >
-                  {[slide1, slide2, slide3].map((src, idx) => (
-                      <SwiperSlide key={idx}>
-                        <Box
-                            h={{ base: rem(250), sm: rem(400), md: rem(600), lg: rem(700) }}
-                            w="100%"
-                        >
-                          <Image
-                              src={src}
-                              alt={`Imagem ${idx + 1}`}
-                              radius={0}
-                              fit="cover"
-                              h="100%"
-                              w="100%"
-                          />
-                        </Box>
-                      </SwiperSlide>
-                  ))}
-                </Swiper>
 
+                <SliderCarousel/>
 
                 <Container size="lg" px={{ base: 'xs', md: 0 }} mt="xl">
 

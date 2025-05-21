@@ -8,7 +8,10 @@ import {
   Button,
   Modal,
   Stack,
-  Accordion, Input,
+  Accordion, 
+  Input,
+  Group,
+  SegmentedControl,
 } from '@mantine/core';
 import { useState } from 'react';
 import wellcome from '../assets/card_image.jpeg';
@@ -754,6 +757,7 @@ export default function Marcadores_widget() {
   const [modalOpened, setModalOpened] = useState(false);
   const [selectedMarcador, setSelectedMarcador] = useState<Marcador | null>(null);
   const { marcadores } = useMarcadoresData();
+  const [searchType, setSearchType] = useState('titulo'); // 'titulo' ou 'farmacos'
 
   const openModal = (marcador: Marcador) => {
     setSelectedMarcador(marcador);
@@ -771,13 +775,25 @@ export default function Marcadores_widget() {
   }
 
 
-  // Filtra os marcadores com base no nome ou descrição
+  // Filtra os marcadores com base no tipo de busca selecionado
   const marcadoresFiltrados = marcadores.filter((marcador) => {
     const termo = normalizarTexto(searchTerm);
-    const nome = normalizarTexto(marcador.nome);
-    const descricao = normalizarTexto(marcador.descricao);
 
-    return nome.includes(termo) || descricao.includes(termo);
+    if (searchTerm === '') return true;
+
+    if (searchType === 'titulo') {
+      // Busca por título ou descrição
+      const nome = normalizarTexto(marcador.nome);
+      const descricao = normalizarTexto(marcador.descricao);
+      return nome.includes(termo) || descricao.includes(termo);
+    } else {
+      // Busca por fármacos
+      return marcador.farmacos.some(farmaco => {
+        const nomeFarmaco = normalizarTexto(farmaco.nome);
+        const classeFarmaco = normalizarTexto(farmaco.classe);
+        return nomeFarmaco.includes(termo) || classeFarmaco.includes(termo);
+      });
+    }
   });
 
 
@@ -793,16 +809,29 @@ export default function Marcadores_widget() {
             Marcadores
           </Title>
 
-          <Input
-              placeholder="Pesquisar por marcadores"
-              value={searchTerm}
-              onChange={(event) => setSearchTerm(event.currentTarget.value)}
-              style={{
-                borderRadius: '20px',
-                border: 'none',
-                borderColor: '#000',
-              }}
-          />
+          <Stack gap="xs">
+            <Input
+                placeholder="Pesquisar por marcadores"
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.currentTarget.value)}
+                style={{
+                  borderRadius: '20px',
+                  border: 'none',
+                  borderColor: '#000',
+                }}
+            />
+            <Group align="center">
+              <Text>Tipo de busca: </Text>
+              <SegmentedControl
+                value={searchType}
+                onChange={setSearchType}
+                data={[
+                  { label: 'Título/Descrição', value: 'titulo' },
+                  { label: 'Fármacos', value: 'farmacos' },
+                ]}
+              />
+            </Group>
+          </Stack>
 
           <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={{ base: 'md', md: 'lg' }} mt="xl">
             {marcadoresFiltrados.map((marcador, index) => (
