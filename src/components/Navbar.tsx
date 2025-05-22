@@ -6,7 +6,7 @@ import {
   Anchor,
   Burger,
   Drawer,
-  Stack,
+  Stack, Text,
 } from '@mantine/core';
 import logo from '../assets/icon_home.svg';
 
@@ -24,7 +24,8 @@ export function Navbar({ drawerOpened, setDrawerOpened }: NavbarProps) {
         onClose={() => setDrawerOpened(false)}
         size="100%"
         padding="md"
-        title="Menu"
+        title={<Text fw={700}>Menu de navegação</Text>}
+        position="left"
         zIndex={1000}
       >
         <Stack gap={'xl'}>
@@ -47,10 +48,10 @@ export function Navbar({ drawerOpened, setDrawerOpened }: NavbarProps) {
             size="lg" 
             onClick={() => setDrawerOpened(false)}
           >
-            Áreas
+            Marcadores
           </Anchor>
           <Anchor 
-            href="/#contact"
+            href=".#contact"
             size="lg" 
             onClick={() => setDrawerOpened(false)}
           >
@@ -69,7 +70,7 @@ export function Navbar({ drawerOpened, setDrawerOpened }: NavbarProps) {
               <Anchor href="#" c="white" underline="never">Início</Anchor>
               <Anchor href="/sobre" c="white" underline="never">Sobre</Anchor>
               <Anchor href="/marcadores" c="white" underline="never">Marcadores</Anchor>
-              <Anchor href="/#contact" c="white" underline="never">Contato</Anchor>
+              <Anchor href=".#contact" c="white" underline="never">Contato</Anchor>
             </Group>
 
             {/* Mobile Burger Button */}
