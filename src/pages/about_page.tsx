@@ -5,7 +5,7 @@ import {
     Title,
     Flex,
     Text,
-    Image,
+    Image, Stack,
 } from "@mantine/core";
 import { useState } from "react";
 import wellcome from "../assets/quem_somos.jpg";

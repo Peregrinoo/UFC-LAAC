@@ -7,6 +7,7 @@ import '@mantine/core/styles.css';
 import MarcadoresPage from "./pages/marcadores_page.tsx";
 import AboutPage from "./pages/about_page.tsx";
 import NotFoundPage from "./pages/not_found_page.tsx";
+import ReferencesPage from "./pages/references_page.tsx";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')!).render(
                 <Route element={<HomePage/>} path={'/'}></Route>
                 <Route element={<MarcadoresPage/>} path={'/marcadores'}/>
                 <Route element={<AboutPage/>} path={'/sobre'}/>
+                <Route element={<ReferencesPage/>} path={'/referencias'}/>
                 <Route element={<NotFoundPage/>} path={'*'}/>
             </Routes>
         </BrowserRouter>

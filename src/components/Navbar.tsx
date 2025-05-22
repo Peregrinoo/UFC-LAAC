@@ -43,12 +43,19 @@ export function Navbar({ drawerOpened, setDrawerOpened }: NavbarProps) {
           >
             Sobre
           </Anchor>
-          <Anchor 
-            href="/marcadores"
-            size="lg" 
-            onClick={() => setDrawerOpened(false)}
+          <Anchor
+              href="/marcadores"
+              size="lg"
+              onClick={() => setDrawerOpened(false)}
           >
             Marcadores
+          </Anchor>
+          <Anchor
+              href="/referencias"
+              size="lg"
+              onClick={() => setDrawerOpened(false)}
+          >
+            Referências
           </Anchor>
           <Anchor 
             href=".#contact"
@@ -70,6 +77,7 @@ export function Navbar({ drawerOpened, setDrawerOpened }: NavbarProps) {
               <Anchor href="#" c="white" underline="never">Início</Anchor>
               <Anchor href="/sobre" c="white" underline="never">Sobre</Anchor>
               <Anchor href="/marcadores" c="white" underline="never">Marcadores</Anchor>
+              <Anchor href="/referencias" c="white" underline="never">Referências</Anchor>
               <Anchor href=".#contact" c="white" underline="never">Contato</Anchor>
             </Group>
 
