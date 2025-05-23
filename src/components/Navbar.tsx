@@ -26,11 +26,14 @@ export function Navbar({ drawerOpened, setDrawerOpened }: NavbarProps) {
         padding="md"
         title={<Text fw={700}>Menu de navegação</Text>}
         position="left"
+        style={{
+          fontFamily: 'poppins'
+        }}
         zIndex={1000}
       >
         <Stack gap={'xl'}>
           <Anchor 
-            href="#" 
+            href="/"
             size="lg" 
             onClick={() => setDrawerOpened(false)}
           >
@@ -67,14 +70,14 @@ export function Navbar({ drawerOpened, setDrawerOpened }: NavbarProps) {
         </Stack>
       </Drawer>
 
-      <AppShell.Header style={{ background: '#04293b' }}>
+      <AppShell.Header style={{ background: '#04293b', fontFamily: 'poppins' }}>
         <Container size="lg" h="100%" px={{ base: 'xs', md: 0 }}>
           <Group justify="space-between" h="100%" wrap="nowrap">
             <Image src={logo} alt="ExaFarm Logo" h={90} w={90} style={{ minWidth: 40 }} />
 
             {/* Desktop Navigation */}
             <Group visibleFrom="md">
-              <Anchor href="#" c="white" underline="never">Início</Anchor>
+              <Anchor href="/" c="white" underline="never">Início</Anchor>
               <Anchor href="/sobre" c="white" underline="never">Sobre</Anchor>
               <Anchor href="/marcadores" c="white" underline="never">Marcadores</Anchor>
               <Anchor href="/referencias" c="white" underline="never">Referências</Anchor>

@@ -26,7 +26,7 @@ export default function HomePage() {
   }, []);
   return (
       <AppShell header={{ height: 90 }} padding="md">
-        <Navbar drawerOpened={drawerOpened} setDrawerOpened={setDrawerOpened} />
+        <Navbar drawerOpened={drawerOpened} setDrawerOpened={setDrawerOpened}/>
 
         <AppShell.Main>
           <section id="home" style={{}}>
@@ -35,7 +35,9 @@ export default function HomePage() {
 
                 <SliderCarousel/>
 
-                <Container size="lg" px={{ base: 'xs', md: 0 }} mt="xl">
+                <Container size="lg" px={{ base: 'xs', md: 0 }} mt="xl" style={{
+                  fontFamily: 'Poppins'
+                }}>
 
                   <Flex 
                     mt="xl" 
@@ -82,6 +84,9 @@ export default function HomePage() {
                   w="100%"
                   align={'start'}
                   px={{ base: 'xs', sm: 0 }}
+                  style={{
+                    fontFamily: 'Poppins'
+                  }}
                 >
                   <Text fz={{ base: 15, md: 16 }} ta={{ base: 'center', sm: 'left' }} w="100%">
                     <strong>Instagram:</strong>{' '}
@@ -96,7 +101,7 @@ export default function HomePage() {
                     </Anchor>
                   </Text>
                   <Text fz={{ base: 15, md: 16 }} ta={{ base: 'center', sm: 'left' }} w="100%">
-                    <strong>Endereço:</strong> sala de Pesquisa de Toxicologia, localizada no 1° andar do Bloco do Curso de Farmácia na Rua Pastor Samuel Munguba, n°1210 – Rodolfo Teófilo, Fortaleza-CE.
+                    <strong>Endereço:</strong> Sala de Pesquisa de Toxicologia, localizada no 1° andar do Bloco do Curso de Farmácia na Rua Pastor Samuel Munguba, n°1210 – Rodolfo Teófilo, Fortaleza-CE.
                   </Text>
                 </Stack>
               </Flex>

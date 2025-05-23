@@ -8,6 +8,8 @@ import MarcadoresPage from "./pages/marcadores_page.tsx";
 import AboutPage from "./pages/about_page.tsx";
 import NotFoundPage from "./pages/not_found_page.tsx";
 import ReferencesPage from "./pages/references_page.tsx";
+import "@fontsource/raleway";
+import "@fontsource/poppins";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

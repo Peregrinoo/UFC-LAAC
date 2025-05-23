@@ -19,7 +19,7 @@ export default function AboutPage() {
             header={{ height: 90 }}
             padding="md"
             styles={{
-                main: { background: "#f8f9fa", minHeight: "100vh" },
+                main: { background: "#f8f9fa", minHeight: "100vh", fontFamily: "Poppins"},
             }}
         >
             <Navbar drawerOpened={drawerOpened} setDrawerOpened={setDrawerOpened} />

@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.6",
+    "@fontsource/raleway": "^5.2.5",
     "@mantine/carousel": "^8.0.1",
     "@mantine/charts": "^8.0.1",
     "@mantine/code-highlight": "^8.0.1",

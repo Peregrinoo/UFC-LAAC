@@ -804,7 +804,7 @@ export default function Marcadores_widget() {
         padding: '40px',
         background: '#f8f9fa'
       }}>
-        <Container size="lg" px={{ base: 'xs', md: 0 }}>
+        <Container size="lg" px={{ base: 'xs', md: 0 }} style={{fontFamily: 'Poppins'}}>
           <Title order={2} ta="center" mb={{ base: 'lg', md: 'xl' }} fz={{ base: 24, md: 32 }}>
             Marcadores
           </Title>
@@ -833,7 +833,14 @@ export default function Marcadores_widget() {
             </Group>
           </Stack>
 
-          <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={{ base: 'md', md: 'lg' }} mt="xl">
+          <SimpleGrid
+              cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
+              spacing={{ base: 'md', md: 'lg' }}
+              mt="xl"
+              style={{
+                fontFamily: 'raleway'
+              }}
+          >
             {marcadoresFiltrados.map((marcador, index) => (
                 <Card
                     key={index}
@@ -889,6 +896,9 @@ export default function Marcadores_widget() {
         title={"Detalhes do Marcador"}
         size="lg"
         centered
+        style={{
+          fontFamily: 'raleway'
+        }}
       >
         {selectedMarcador && (
           <Stack>
