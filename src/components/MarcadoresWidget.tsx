@@ -853,8 +853,8 @@ export default function Marcadores_widget() {
                   <Card.Section>
                     <Image
                         src={wellcome}
-                        height={160}
-                        fit="fill"
+                        height='auto'
+                        fit="cover"
                         alt={marcador.nome}
                     />
                   </Card.Section>
