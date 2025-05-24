@@ -42,7 +42,7 @@ export default function ReferencesPage() {
                             justify="start"
                             style={{ minHeight: "60vh", textAlign: "justify", width: "100%" }}
                         >
-                            <Title ta={{ base: "center", md: "start" }}>Referências dos fármacos</Title>
+                            <Title ta={{ base: "center", md: "start" }}>Referências</Title>
 
                             <Flex
                                 direction="column"
