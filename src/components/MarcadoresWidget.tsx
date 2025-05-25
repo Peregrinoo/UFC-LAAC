@@ -38,7 +38,7 @@ const useMarcadoresData = () => {
     {
       nome: "Ureia",
       descricao: "Avalia a função renal através da quantidade de ureia no sangue.",
-      descricaoDetalhada: "A ureia é o principal metabólito nitrogenado resultante do catabolismo proteico. Embora seja um marcador amplamente utilizado da função renal, é um preditor limitado da taxa de filtração glomerular (TFG), já que entre 40% e 70% da ureia filtrada retorna ao plasma por difusão passiva, processo influenciado pelo fluxo urinário. Clinicamente, é útil para o cálculo da relação ureia:creatinina, que normalmente é em torno de 30. Essa relação tende a aumentar (>40–50) em situações como desidratação, insuficiência cardíaca congestiva, febre prolongada ou uso inadequado de diuréticos intravenosos.",
+      descricaoDetalhada: "A ureia constitui o principal metabólito nitrogenado derivado da degradação de proteínas pelo organismo. A ureia é um preditor fraco da filtração glomerular, pois 40%-70% retornam para o plasma por um processo de difusão passiva tubular, que é dependente do fluxo urinário. Sua principal utilidade clínica consiste na determinação da razão ureia:creatinina sérica. Em condições normais, essa relação é em torno de 30, mas este valor aumenta para > 40-50 quando, por exemplo, ocorre contração do volume extra­celular (desidratação, insuficiência cardíaca congestiva, estados febris prolongados e uso inadequado da terapia diurética por via intravenosa).",
       farmacos: [
         {
           nome: "Aciclovir",
@@ -143,7 +143,7 @@ const useMarcadoresData = () => {
     {
       "nome": "Fosfatase Alcalina",
       "descricao": "Enzima associada a ossos, fígado e vias biliares.",
-      "descricaoDetalhada": "A fosfatase alcalina (ALP) compreende um grupo de enzimas fosfoidrolases que apresentam atividade máxima em pH alcalino, próximo de 10,0. Está localizada predominantemente em superfícies de troca como o epitélio intestinal, túbulos renais, barreira hematoencefálica e placenta. Cada tecido apresenta uma isoenzima, de modo que a ALP dosada no plasma é resultado da soma das diferentes isoenzimas presentes no organismo, com predomínio das frações ósseas e hepáticas. As condições fisiopatológicas em que os níveis plasmáticos de ALP estão aumentados são, por exemplo, as hepatopatias, principalmente aquelas envolvidas na obstrução do trato biliar, carcinomas hepáticos, primário e secundário, também refletem aumento de ALP plasmática. As morbidades envolvendo o tecido ósseo, como a Doença de Paget, também podem ser rastreadas por meio do exame de fosfatase alcalina plasmática.",
+      "descricaoDetalhada": "A fosfatase alcalina (ALP ou FAL) compreende um grupo de enzimas fosfoidrolases que apresentam atividade máxima em pH alcalino, próximo de 10,0. Está localizada predominantemente em superfícies de troca como o epitélio intestinal, túbulos renais, barreira hematoencefálica e placenta. Cada tecido apresenta uma isoenzima, de modo que a ALP dosada no plasma é resultado da soma das diferentes isoenzimas presentes no organismo, com predomínio das frações ósseas e hepáticas. As condições fisiopatológicas em que os níveis plasmáticos de ALP estão aumentados são, por exemplo, as hepatopatias, principalmente aquelas envolvidas na obstrução do trato biliar, carcinomas hepáticos, primário e secundário, também refletem aumento de ALP plasmática. As morbidades envolvendo o tecido ósseo, como a Doença de Paget, também podem ser rastreadas por meio do exame de fosfatase alcalina plasmática.",
       "farmacos": [
         {
           "nome": "Amoxicilina",
@@ -283,7 +283,7 @@ const useMarcadoresData = () => {
     {
       "nome": "Aspartato Aminotransferase (AST)",
       "descricao": "Marcador para diagnóstico de danos celulares no fígado, coração e músculos.",
-      "descricaoDetalhada": "A AST é uma enzima que está presente tanto no citosol quanto nas mitocôndrias das células, especialmente no fígado, coração e músculos. A versão mitocondrial da AST, que é mais importante para o diagnóstico de lesões hepáticas, é liberada na corrente sanguínea quando há dano à célula. Então, quando há aumento da AST, ela pode ser um indicativo de dano celular, não só no fígado, mas também em outros órgãos, dependendo da forma da enzima liberada.",
+      "descricaoDetalhada": "A Aspartato Aminotransferase (AST), anteriormente conhecida como Transaminase Glutâmico-Oxalacética (TGO), é uma enzima que está presente tanto no citosol quanto nas mitocôndrias das células, especialmente no fígado, coração e músculos. A versão mitocondrial da AST, que é mais importante para o diagnóstico de lesões hepáticas, é liberada na corrente sanguínea quando há dano à célula. Então, quando há aumento da AST, ela pode ser um indicativo de dano celular, não só no fígado, mas também em outros órgãos, dependendo da forma da enzima liberada.",
       "farmacos": [
         {
           "nome": "Paracetamol",
@@ -325,7 +325,7 @@ const useMarcadoresData = () => {
     {
       "nome": "Gama-GT",
       "descricao": "Indica lesão hepática, especialmente por álcool ou medicamentos.",
-      "descricaoDetalhada": "A gama-glutamil transferase (GGT) é uma enzima presente principalmente no fígado e nas vias biliares. É um marcador sensível de dano hepático, especialmente relacionado ao consumo crônico de álcool e ao uso de medicamentos que induzem enzimas hepáticas. Seus níveis também podem se elevar mesmo na ausência de lesão hepática significativa, devido à indução enzimática.",
+      "descricaoDetalhada": "A Gama-Glutamiltransferase (GGT) é uma enzima encontrada no fígado, nos rins e no pâncreas que participa do metabolismo de aminoácidos. Desse modo, na prática clínica a Gama-GT é usada como um marcador de função hepática, indicando se há uma possível doença no fígado, além de também ser usada para detectar lesões nas vias biliares.",
       "farmacos": [
         {
           "nome": "Fenitoína",
@@ -367,7 +367,7 @@ const useMarcadoresData = () => {
     {
       "nome": "ALT",
       "descricao": "Enzima encontrada no fígado; detecta danos hepáticos (TGP).",
-      "descricaoDetalhada": "A alanina aminotransferase (ALT) é uma enzima localizada principalmente nas células do fígado. Elevações nos níveis séricos de ALT são altamente específicas para dano hepático, refletindo lesão hepatocelular.",
+      "descricaoDetalhada": "A Alanina Aminotransferase (ALT), também conhecida como Transaminase Glutâmico-Pirúvica (TGP), é uma enzima localizada no citoplasma dos hepatócitos e atua na conversão de alanina e alfa-cetoglutarato em piruvato e glutamato, também com a participação do cofator piridoxal 5’-fosfato. Por ser citoplasmática e predominar no fígado com uma meia-vida mais curta, sua elevação plasmática costuma indicar lesões hepáticas agudas e recentes. Esse aumento ocorre devido à alteração da permeabilidade da membrana celular dos hepatócitos, permitindo que a enzima escape para a circulação. Quando a atividade da alanina aminotransferase supera a da aspartato aminotransferase, geralmente há uma lesão hepática aguda em curso.",
       "farmacos": [
         {
           "nome": "Isoniazida",
@@ -479,7 +479,7 @@ const useMarcadoresData = () => {
     {
       "nome": "Colesterol Total",
       "descricao": "Exame que demonstra a concentração de 3 tipos de colesterol encontrados na corrente sanguínea: LDL, HDL e VLDL.",
-      "descricaoDetalhada": "O LDL (Low Density Lipoprotein) são lipoproteínas de baixa densidade que carregam a maior parte do colesterol para síntese de hormônios e outras substâncias. O HDL (High Density Lipoprotein) são lipoproteínas de alta densidade responsáveis por limpar as artérias, retirando o excesso de colesterol. O VLDL (Very Low Density Lipoprotein) são lipoproteínas de baixíssima densidade que carregam colesterol e triglicerídeos para as células.",
+      "descricaoDetalhada": "Exame que demonstra a concentração de 3 tipos de colesterol encontrados na corrente sanguínea: o LDL, o HDL e o VLDL. O LDL (Low density lipoprotein) são lipoproteínas de baixa densidade, responsáveis por carregar a grande parte do colesterol que será levado para a síntese de hormônios e outras substâncias. O HDL (High density lipoprotein) são lipoproteínas de alta densidade, responsáveis por limpar as artérias e retirar o excesso de colesterol dos vasos para serem metabolizadas no fígado. O VLDL (Very Low Density Lipoprotein) são as lipoproteínas de baixíssima densidade, responsáveis por carregar colesterol e triglicerídeos para as células.",
       "farmacos": [
         {
           "nome": "Estanozolol",
@@ -584,7 +584,7 @@ const useMarcadoresData = () => {
     {
       "nome": "Triglicerídeos",
       "descricao": "Exame que demonstra a concentração de triglicerídeos na corrente sanguínea.",
-      "descricaoDetalhada": "Triglicerídeos são gorduras que armazenam energia e podem ser encontradas tanto no tecido adiposo quanto na corrente sanguínea, sendo transportados pelo VLDL (Very Low Density Lipoprotein).",
+      "descricaoDetalhada": "Os triglicerídeos são gorduras responsáveis por armazenar energia, e podem ser encontradas tanto no tecido adiposo, como na corrente sanguínea, sendo transportado pelo VLDL (Very Low Density Lipoprotein).",
       "farmacos": [
         {
           "nome": "Ácido nicotínico",
@@ -654,7 +654,7 @@ const useMarcadoresData = () => {
     {
       "nome": "Ácido Úrico Sérico",
       "descricao": "Subproduto do metabolismo das purinas, excretado predominantemente pelos rins.",
-      "descricaoDetalhada": "O ácido úrico é excretado pelos rins e níveis elevados no soro podem indicar gota, disfunções renais ou uso de determinados fármacos. Níveis reduzidos são menos comuns, porém clinicamente relevantes em alguns contextos.",
+      "descricaoDetalhada": "Subproduto do metabolismo de purinas, o ácido úrico é excretado pelos rins. Níveis elevados sugerem gota, disfunções renais ou uso de certos fármacos. Níveis baixos são menos comuns, mas também relevantes clinicamente.",
       "farmacos": [
         {
           "nome": "Enalapril/Captopril",
@@ -731,7 +731,8 @@ const useMarcadoresData = () => {
     {
       "nome": "Bilirrubina Total",
       "descricao": "Marcador de função hepática, metabolismo de eritrócitos e função da vesícula biliar.",
-      "descricaoDetalhada": "A bilirrubina é um pigmento derivado da degradação da hemoglobina dos glóbulos vermelhos. Pode ser direta (solúvel em água, conjugada pelo fígado) ou indireta (insolúvel em água, não conjugada pelo fígado). O exame mede a soma das duas frações no sangue, e alterações nos valores podem indicar problemas como hepatite, cirrose, anemia hemolítica ou obstruções biliares.",
+      "descricaoDetalhada": "São pigmentos derivados da degradação da hemoglobina dos glóbulos vermelhos, podendo se apresentar em 2 tipos: bilirrubina indireta, a qual é insolúvel em água e não é conjugada pelo fígado; bilirrubina direta, que é solúvel em água e passou pelo processo de conjugação hepática.\n" +
+          "Nesse âmbito, o exame de bilirrubina total mede a soma da direta com a indireta no sangue, sendo um marcador de função hepática, da função da vesícula biliar e do metabolismo de eritrócitos. Assim, as alterações nesse indicador apontam para problemas como hepatite, cirrose, anemia hemolítica ou obstruções biliares.",
       "farmacos": [
         {
           "nome": "Ácido Valproico",
@@ -801,7 +802,7 @@ const useMarcadoresData = () => {
     {
       "nome": "Glicose Sérica",
       "descricao": "É um carboidrato essencial para o metabolismo energético celular.",
-      "descricaoDetalhada": "A glicose é regulada por insulina, glucagon e outros hormônios. Alterações nos níveis podem indicar diabetes, hipoglicemia ou desordens endócrinas.",
+      "descricaoDetalhada": "Também conhecida como glicemia, a glicose sérica avalia os níveis sanguíneos de glicose. Tais níveis são regulados por insulina, glucagon e outros hormônios. Alterações indicam risco de diabetes, hipoglicemia ou desordens endócrinas. ",
       "farmacos": [
         {
           "nome": "Metformina",
@@ -1047,7 +1048,7 @@ export default function Marcadores_widget() {
                         <strong>Indicações:</strong> {farmaco.indicacoes}
                       </Text>
                       <Text size="sm">
-                        <strong>Mecanismo de interação:</strong> {farmaco.mecanismo}
+                        <strong>Mecanismo de interação fármaco-marcador:</strong> {farmaco.mecanismo}
                       </Text>
                       <Text size="sm">
                         <strong>Resultado da interação:</strong> {farmaco.resultado}
