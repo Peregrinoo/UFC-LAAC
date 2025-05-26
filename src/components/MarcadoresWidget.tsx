@@ -365,7 +365,7 @@ const useMarcadoresData = () => {
       ]
     },
     {
-      "nome": "ALT",
+      "nome": "Alanina Aminotransferase(ALT)",
       "descricao": "Enzima encontrada no fígado; detecta danos hepáticos (TGP).",
       "descricaoDetalhada": "A Alanina Aminotransferase (ALT), também conhecida como Transaminase Glutâmico-Pirúvica (TGP), é uma enzima localizada no citoplasma dos hepatócitos e atua na conversão de alanina e alfa-cetoglutarato em piruvato e glutamato, também com a participação do cofator piridoxal 5’-fosfato. Por ser citoplasmática e predominar no fígado com uma meia-vida mais curta, sua elevação plasmática costuma indicar lesões hepáticas agudas e recentes. Esse aumento ocorre devido à alteração da permeabilidade da membrana celular dos hepatócitos, permitindo que a enzima escape para a circulação. Quando a atividade da alanina aminotransferase supera a da aspartato aminotransferase, geralmente há uma lesão hepática aguda em curso.",
       "farmacos": [
